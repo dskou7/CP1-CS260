@@ -1,0 +1,6 @@
+Mrec company website
+
+-intro page - MRB themed - kell hounds logo initially
+-Roster - pilots
+-Company Inventory - mechs
+-available contracts
