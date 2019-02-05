@@ -1,11 +1,15 @@
 
+.logo{
+  max-width: 50px !important;
+  max-height: 50px !important;
+}
+
 body {
   background-image: url('/images/MRB logo.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-color: white !important;
-  color: #d9d9d9 !important;
   padding-bottom: 35px;
   padding-top: 10px;
   padding-left: 10px;
@@ -28,8 +32,6 @@ body {
 
 h1 {
   text-align: center;
-  background-color: #293d3d;
-  color: white !important;
 }
 a.footer{
   width: 100%;
