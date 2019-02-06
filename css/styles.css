@@ -51,69 +51,57 @@ a.footer{
   color: #fff;
 }
 
-/* masonry stuff for gallery page */
-
-/* Box-sizing reset: //w3bits.com/?p=3225 */
-html {
-  box-sizing: border-box;
+.media .image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+/* roster CSS grid stuff*/
+.name {
+  grid-area: name;
+  font-family: serif;
+  text-align: center;
+  font-size: 20px;
+}
+.portrait {
+  grid-area: portrait;
+  text-align: center;
 }
 
-/* The Masonry Container */
-.masonry {
-  margin: 1em auto;
-  /* max-width: 768px; */
-  column-gap: 1em;
+.portrait > img {
+  object-fit: cover;
+  max-width: 300px;
+}
+.stats {
+  grid-area: stats;
+
+}
+.info1 {
+  grid-area: info1;
+  color: black;
+}
+.info2 {
+  grid-area: info2;
+  color: black;
 }
 
-/* The Masonry Brick */
-.item {
-  background: #a6a6a6;
-  padding: 1em;
-  margin: 0 0 1em;
-}
-
-
-/* Masonry on large screens */
-@media only screen and (min-width: 1024px) {
-  .masonry {
-    column-count: 3;
+.roster {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "name name"
+        "portrait stats"
+        "info1 info1"
+        "info2 info2";
+    grid-gap: 20px;
+    background-color: rgba(0, 0, 0, 0.65);
   }
-  img{
-    height: auto;
-    width: auto;
-    max-width: 400px;
-    max-height: 400px;
-  }
-}
 
-/* Masonry on medium-sized screens */
-@media only screen and (max-width: 1023px) and (min-width: 768px) {
-  .masonry {
-    column-count: 2;
-  }
-  img {
-      height: auto;
-      width: auto;
-      max-width: 300px;
-      max-height: 300px;
-  }
-}
-
-/* Masonry on small screens */
-@media only screen and (max-width: 767px) and (min-width: 540px) {
-  .masonry {
-    column-count: 1;
-  }
-  img {
-      height: auto;
-      width: auto;
-      max-width: 500px;
-      max-height: 500px;
-  }
-}
+  .roster-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+          "roster roster";
+      grid-gap: 20px;
+    }
